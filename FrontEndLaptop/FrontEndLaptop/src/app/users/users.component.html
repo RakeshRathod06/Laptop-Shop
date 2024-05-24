@@ -1,0 +1,99 @@
+ <!--
+<h2 id="a">Users List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Price</th>
+            <th>Details</th>
+            <th>Image</th>
+
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let laptop of laptop">           
+            <td>{{laptop.brand}}</td>
+            <td>{{laptop.model}}</td>
+            <td>{{laptop.price}}</td>
+            <td>{{laptop.description}}</td>
+            <td> <img [src]="laptop.image"  alt="Product Image" height="90" width="120" /> </td>
+
+            <td>
+                 <!--<button (click) ="updateUser(laptop.id)" class="btn btn-info">Update</button>
+                <button (click) ="deleteUser(laptop.id)" class="btn btn-danger" style="margin-left:10px" (click)="delete()">Delete</button><br>
+
+               <button (click) ="addProduct(product.id)" class="btn btn-info" style="margin-left:10px">Add</button>
+
+            </td>
+        </tr>
+    </tbody>
+    &nbsp; &nbsp;<a href="/admindashboard">back</a>
+
+</table>--> 
+
+<body style="background-color: rgb(193, 247, 229);">
+<div  class="container-fluid">
+    <br>
+    <h3 id="a" style=" color: #180202;font-size: 50px;text-align: left;font-family:serif;text-align: center;"> Users List </h3><br>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>Address</th>
+            <th>🛠</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Fetch users data from database and display here -->
+           <tr *ngFor="let user of user">
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.address}}</td>
+                <td>
+               <!--<button (click) ="updateUser(user.id)" class="btn btn-info">Update</button>--> 
+                <button (click) ="deleteUser(user.id)" class="btn btn-danger" style="margin-left:10px" >Delete</button><br>
+            </td>
+              
+                <!--<td>gaurav@gmail.com</td>
+                <td>1234567890</td>
+            </tr>
+            <tr>
+                <td>pooja@gmail.com</td>
+                <td>9988335566</td>
+            </tr>
+           <tr>
+                <td>2</td>
+                <td>Dhanu</td>
+                <td>dhanu@gmail.com</td>
+                <td>2244887766</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ram</td>
+                <td>ram@gmail.com</td>
+                <td>2244887766</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>anu</td>
+                <td>anu@gmail.com</td>
+                <td>2244887766</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>manu</td>
+                <td>manu@gmail.com</td>
+                <td>2244887766</td>
+            </tr>-->
+        </tbody>
+    </table>
+    &nbsp; &nbsp;<a href="/admindashboard"><h4>back</h4></a>
+
+</div>
+</body>

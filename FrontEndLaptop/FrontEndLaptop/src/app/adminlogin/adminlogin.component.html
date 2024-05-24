@@ -1,0 +1,120 @@
+<!--Main Navigation final-->
+<header>
+    <style>
+      #intro {
+        background-image: url(https://t4.ftcdn.net/jpg/04/60/71/01/360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg);
+        height: 100vh;
+      }
+  
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+  
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" target="_blank">
+          <strong>Laptop Shop</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#intro">User login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" aria-current="page" href="#intro" (click)="guide()"> Guide</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#bottom">About</a>
+            </li>-->
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+  
+  
+  
+    <!-- Background image -->
+    <div id="intro" class="bg-image shadow-2-strong">
+      <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="container text-center">
+              <h2 class="text-white">Welcome Admin</h2><br>
+              <h5 class="text-white">Admin login</h5>
+                </div>
+              
+            <div class="col-xl-5 col-md-8">
+              <!--new-->
+              <form [formGroup]="loginForm" (ngSubmit)="adminLogin()" class="bg-white rounded-5 shadow-5-strong p-5">
+                <!-- Email input //previous class="form-outline,   For username- [(ngModel)]="username", password- [(ngModel)]="password"   -->
+                <div class="form-group  mb-4">
+                  <input type="text" id="form1Example1"  placeholder="Enter Admin's username" required class="form-control" formControlName="username" />
+                  <label class="form-label" for="form1Example1">Email address</label>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-group  mb-4">
+                  <input type="password" id="form1Example2"  placeholder="Enter Admin's password" required class="form-control" formControlName="password" />
+                  <label class="form-label" for="form1Example2">Password</label>
+                </div>
+  
+                <!-- Checkbox to remember credentials -->
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                  <label class="form-check-label" for="form1Example3">
+                    Remember me
+                  </label>
+                </div>
+  
+                <!-- Sign-in button -->
+                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+  
+                <!-- Registration link for new admin
+                      " I am stopping for security  "
+                -->
+               <!--  <div class="text-center mt-4">
+                  New User? <a (click)="navigateToRegistration()">Register Here</a>
+    
+                </div>-->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--Main Navigation-->
+  
+  
+  
+  
+  <!--Footer-->
+  <footer class="bg-light text-lg-start">
+    <div id="bottom" class="py-4 text-center">
+      <a role="button" class="btn btn-primary btn-lg m-2" href="/login" rel="nofollow" target="_blank">
+        User Login
+      </a>
+      <a role="button" class="btn btn-primary btn-lg m-2" href="/adminlogin" target="_blank">
+        Admin Login
+      </a>
+    </div>
+  
+    <hr class="m-0" />
+  </footer>
+  <!--Footer-->

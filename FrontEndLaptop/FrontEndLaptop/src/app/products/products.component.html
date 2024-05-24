@@ -1,0 +1,97 @@
+<html>
+<body  style="background-color: rgba(255, 208, 170, 0.562);">
+
+<!--navbar1-->
+<div  >
+  <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm"style="background-color: rgb(255, 188, 225);">
+    <div style="background-color: rgb(0, 0, 0); border-radius:20%; color:rgb(255, 145, 0); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" class="container">
+      <a class="navbar-brand"style="color: aliceblue;"><i class="fa-solid fa-shop me-2"></i> <strong>Laptop SHOP</strong></a>
+      <img src="https://images.unsplash.com/photo-1491472253230-a044054ca35f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D" height="30" width="70"  style="border-radius: 50%; width: 80px; height: 70px;">&nbsp;&nbsp;
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown" >
+        
+        <div class="ms-auto d-none d-lg-block"  >
+          <!----<div class="ms-auto d-none d-lg-block">
+            <div class="input-group">
+              <span class="border-warning input-group-text bg-warning text-white">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            !--- <input
+              type="text"
+              class="form-control border-warning"
+              style="color:#7a7a7a"
+              (input)="searchProduct($event)"
+              placeholder="Search products by name"
+            />-- 
+            
+            
+              <button class="btn btn-warning text-white">Search</button>
+            </div>
+          </div>-->
+          
+          
+          
+        </div>
+        <ul class="navbar-nav ms-auto " >
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/header" style="color: aliceblue;"><b> Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/products" routerLink="/products"style="color: aliceblue;"><i class="fa fa-shopping-bag" aria-hidden="true"></i> <b> Products</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/cart"style="color: aliceblue;"><b> Cart</b> </a>
+          </li>
+         <!-- <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/cart"style="color: aliceblue;"><i class="fa-solid fa-cart-shopping me-1" ></i><i class="fa-solid fa-circle-user me-1" ></i> <b> Cart</b> </a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/offers"style="color: aliceblue;"><b> Offers</b></a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/contact"  style="white-space: nowrap;color: aliceblue;"><b>Contact us</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/about"  style="white-space: nowrap;color: aliceblue;"><b>About us</b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
+
+
+<!--Products -->
+<div   class="container mt-4">
+  <h3 style=" color: #ffffff;font-size: 70px;text-align: left;font-family:serif;text-align: center;"> Products </h3>
+  <br>
+    <div class="row">
+      <div class="col-4"*ngFor="let laptop of laptop | paginate: { itemsPerPage: count, currentPage: p }" >
+               <!-- Card layout for each product -->
+        <div class="card mb-4">
+          <br>
+          <img [src]="laptop?.image" class="card-img-top" alt="Product Image" height="250" width="150" />
+          <div class="card-body">
+            <h5 class="card-title">{{ laptop.brand }} - {{ laptop.model }}</h5>
+            <p class="card-text">Price: {{ laptop.price }}</p>
+        <button class="btn btn-primary" (click)="showProductDetails(laptop.id)">Details</button> 
+          <!-- <button class="btn btn-primary" href="/productdetails">Details</button>--> 
+
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  <!-- Pagination -->
+  <br>
+  <div  class="text-center">
+    <pagination-controls (pageChange)="goToNextPage($event)"></pagination-controls>
+    </div>
+  
+  </div>
+
+  </body>
+</html>

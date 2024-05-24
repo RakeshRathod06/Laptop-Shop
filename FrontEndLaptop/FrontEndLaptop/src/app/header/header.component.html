@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+    body {
+      background-color: rgba(0, 0, 0, 0.1);
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+    }
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .blinking-text {
+      animation: blink 1s infinite;
+      color: rgb(243, 0, 0);
+    }
+/*
+   
+*/
+    .slider {
+  position: relative;
+  width: 99%; /* Adjust the width based on your image size */
+  overflow: hidden;
+  height: 250px; /* Adjust height as needed */
+}
+.slides {
+  display: flex;
+  animation: slide 25s infinite; /* Duration of animation */
+}
+.slide {
+  flex: 0 0 100%; /* Ensures each slide takes the full width of the slider */
+  width: 100%;
+}
+.slide img {
+  width: 100%; /* Set image width to fill the slide */
+  height: 100%; /* Set image height to fill the slide */
+  object-fit: cover; /* Ensure the image covers the entire area without distortion */
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(-400%);
+  }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #fff; }
+  50% { text-shadow: 0 0 20px #00ff00; }
+  100% { text-shadow: 0 0 10px #fff; }
+}
+
+.glow {
+  animation: glow 1s infinite;
+}
+
+  </style>
+</head>
+
+
+
+<body>
+
+<!--navbar1-->
+<div  >
+  <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm"style="background-color: rgb(255, 188, 225);">
+    <div style="background-color: rgb(0, 0, 0); border-radius:25px; color:rgb(255, 145, 0); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" class="container">
+      <a class="navbar-brand"style="color: aliceblue;"><i class="fa-solid fa-shop me-2"></i> <strong>Laptop SHOP</strong></a>
+      <img src="https://www.businessinsider.in/photo/83601179/best-laptop-for-school-and-college-students-in-india.jpg?imgsize=188340" height="70" width="100"  style="border-radius: 50%; width: 100px; height: 100px;">&nbsp;&nbsp;
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown" >
+        
+       
+        <ul class="navbar-nav ms-auto " >
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/header" style="color: aliceblue;"><i class="fa-solid fa-home"></i><b> Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/products" routerLink="/products"style="color: aliceblue;"><b> Products</b></a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/cart"style="color: aliceblue;"><b> Cart</b> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/offers"style="color: aliceblue;"><b> Offers</b></a>
+          </li>
+          <!--<li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" routerLink="/login"style="color: aliceblue;"><i class="fa-solid fa-circle-user me-1" ></i> </a>
+          </li>-->
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/contact"  style="white-space: nowrap;color: aliceblue;"><b>Contact us</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/about"  style="white-space: nowrap;color: aliceblue;"><b>About us</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="login"  (click)=" logout()" style="white-space: nowrap;color: aliceblue;"><i class="fa fa-sign-out" aria-hidden="true"></i><b>logout</b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
+
+
+
+
+
+
+
+  <!--home page1-->
+  <div style="background-color: rgba(0,0,0,0.4);font-family:cursive; color:rgb(252, 247, 247);">
+    <marquee behavior="scroll" direction="left">
+      <h3>🙏🙏🙏 Welcome to our Laptop Shop....! 🙏🙏🙏</h3>
+    </marquee>
+  </div>
+
+  <!--ne img1-->
+  <div class="">
+    <div class="slider">
+      <div class="slides" id="slides" >
+        <div class="slide" style="width: 100px;height: 270px;"><img src="https://www.shutterstock.com/image-vector/red-banner-special-offer-260nw-1035467014.jpg"></div>
+        <div class="slide"><img src="https://images-eu.ssl-images-amazon.com/images/G/31/12407722031/nss/thankyou/mob/new/stories/revised/PC/hero/3000x1200._CB574600647_.jpg" ></div>
+        <div class="slide"><img src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/CEPC/PC-Acc/3000X1200._CB574360222_.jpg"></div>
+        <div class="slide" style="max-width: 100%;height: 250px;"><img src="https://my.aorus.com/upload/Product/F_20221201110479KayvZR.PNG"></div>
+        <div class="slide" style="max-width: 100%;height: 250px;"><img src="https://img.freepik.com/free-psd/landing-page-cyber-monday-template_23-2148707043.jpg?size=626&ext=jpg&ga=GA1.1.2082370165.1715731200&semt=ais_user" ></div>
+       
+        <div class="slide"><img src=" https://cdn.grabon.in/gograbon/images/web-images/uploads/1621489046640/hpshopping-discount-codes.jpg " ></div>
+        <div class="slide"><img src="  https://images.gizbot.com/img/2020/12/amazon-upto-30-off-on-laptops-1607314744.jpg " ></div>
+
+
+        
+      
+           </div>
+    </div>
+  </div>
+<!---->
+
+
+<br>  <br>
+<div style="text-align: center;">
+  <img src="https://img.freepik.com/premium-vector/laptop-vector-graphics-illustration-eps-source-file-format-lossless-scaling-icon-design_1041724-56848.jpg?w=1060" height="500" width="900"  style="border-radius: 10%; width: 400; height: 800;">
+  <br>  <br>
+  <h2 class="glow">Get the best Laptop like us..😀</h2>
+</div>
+<br>  <br>
+<div style="text-align: center;">
+  <img src="https://cdn11.bigcommerce.com/s-g5s1fet0c4/images/stencil/original/carousel/40/OnlineStoreCarouselGraphics_2.png?c=1" height="500" width="900" style="border-radius: 10%;">
+  <br>  <br>
+  <h2 class="blinking-text">All types of laptops available...!</h2>
+</div>
+<br>  <br>
+  <div style="text-align: center;">
+    <img src="https://img.freepik.com/free-psd/cyber-monday-facebook-cover-template_23-2150824191.jpg?w=740" height="500" width="900" style="border-radius: 10%;">
+    <br>  <br>
+    <h2 class="blinking-text">Get up to 50% discount on laptops...!</h2>
+  </div>
+  <br>  <br>
+
+  <div style="text-align: center;">
+    <img src="https://sathya.in/media/86722/catalog/laptop_combo3.jpg?size=600" height="500" width="900"style="border-radius: 10%;">
+    <br>  <br>
+    <h2 class="blinking-text">On shopping of Rs.50000 and above get combo offers...!</h2>
+    <br>
+    <br>
+    <h2 id="bottom"><i>"Check for more laptops in the products section.."</i></h2>
+  </div>
+
+
+  
+</body>
+</html>

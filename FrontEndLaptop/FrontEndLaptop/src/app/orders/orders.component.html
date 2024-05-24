@@ -1,0 +1,127 @@
+<!-- orders.component.html -->
+<body  style="background-color: rgb(231, 239, 240);">
+
+<h2></h2>
+<h3 id="a" style=" color: #1f0202;font-size: 50px;text-align: left;font-family:serif;text-align: center;">Laptop Orders </h3><br>
+
+<table class="container" style="height: auto;width:87%;">
+  <thead>
+    <tr>
+      <th>Order ID</th>
+      <th>img</th>
+      <th>Laptop name</th>
+      <th>Descp</th>
+      <th>Price</th>    
+
+     <!--<th>Status</th>--> 
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order.id }}</td>
+      <td><img [src]="order.image" alt="Product Image" height="70" width="120"></td>
+      <td>{{ order.brand }} - {{ order.model }}</td>
+      <td>{{ order.description }}</td>
+      <td>{{ order.price }}</td>
+
+    <!----<td>{{ order.status }}</td>-->
+    </tr>
+  </tbody>
+</table>
+<br>
+
+
+
+
+
+
+    <!--Users--><br>
+<h3 id="a" style=" color: #1f0202;font-size: 40px;text-align: left;font-family:serif;text-align: center;">Users </h3>
+<p style="text-align: center;">users list who placed orders</p>
+<table class="container" style="height: auto;width:85%;">
+  <thead>
+    <tr>
+      <th>Laptop name</th>
+      <th>Username</th>
+      <th>email</th>
+      <th>Contact number</th>
+      <th>address</th>
+      <th>no. of items</th>    
+      <th>Status</th>
+      <th>  🛠 </th>
+
+     <!--<th>Status</th>--> 
+    </tr>
+  </thead>
+
+  <tbody>     <!--<th>using user.</th>--> 
+    <tr *ngFor="let user of users">
+    <td>{{ user.product }} -
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.contact }}</td>
+      <td>{{ user.address }}</td>
+      <td>{{ user.items }}</td>
+
+      <td>{{ user.status }}</td>
+    <!----<td>{{ order.status }}</td>
+    <button (click)="toggleForm(user)"  class="btn btn-info" >Update status</button>
+    <button (click) ="deleteProduct(user.id)" class="btn btn-danger" style="margin-left:10px" (click)="delete()">Delete</button><br>->
+    <p>Upadate User data!!!</p>-->
+
+    <td>
+      <button (click)="toggleForm(user)" class="btn btn-info">Update status</button>
+      <div *ngIf="user.showForm">
+        <div class="container">
+          <form (ngSubmit)="updateStatus(user)">
+            <div class="form-group">
+              <label>Status</label>
+              <input type="text" class="form-control" [(ngModel)]="user.updatedStatus" name="status">
+            </div>
+            <button class="btn btn-success" type="submit">Update</button>
+          </form>
+        </div>
+      </div>
+    </td>
+
+    </tr>
+  </tbody>
+</table>
+&nbsp;&nbsp; <a href="/admindashboard"><h4>back</h4></a>
+
+
+</body>
+
+
+<!--
+<h2></h2>Latest Orders</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Macbook Pro</td>
+            <td>1</td>
+            <td>$2,000</td>
+            <td>Delivered</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Macbook Air</td>
+            <td>1</td>
+            <td>$1,500</td>
+            <td>Pending</td>
+        </tr>
+       
+    </tbody>
+</table>
+-->

@@ -1,0 +1,62 @@
+
+<body  style="background-color: rgb(186, 240, 247);">
+    <br><br>
+<div class="col-md-6 offset-md-3" style="font-size:large;">
+    <br><br>
+    <h3 style=" color: #160101;font-size: 40px;text-align: left;font-family:serif;text-align: center;">Add New Product!!!</h3><br>
+    <form (ngSubmit) = "onSubmit()">
+       <!---- <div class="form-group">
+            <label>Id</label>
+            <input type="text" class="form-control" id="id"[(ngModel)]="laptop.id" name="id">
+        </div><br>-->
+        <div class="form-group">
+            <label>Brand</label>
+            <input type="text" class="form-control" id="brand"[(ngModel)]="laptop.brand" name="brand">
+        </div><br>
+        <div class="form-group">
+            <label>Model</label>
+            <input type="text" class="form-control" id="Model"[(ngModel)]="laptop.model" name="Model">
+        </div><br>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="text" class="form-control" placeholder="enter price e.g 500.00" id="price"[(ngModel)]="laptop.price" name="price">
+        </div><br>
+        <div class="form-group">
+            <label>Details</label>
+            <input type="text" class="form-control" id="price"[(ngModel)]="laptop.description" name="details">
+        </div><br>
+        <div class="form-group">
+            <label>Main Image/url</label>
+            <!-- <input type="file" class="form-control" id="price"[(ngModel)]="laptop.image" name="image">or -->
+            <input type="text" class="form-control" placeholder="enter image URL" id="price"[(ngModel)]="laptop.image" name="image">
+
+        </div>
+        <br>
+        <!--other images-->
+        <div class="form-group">
+            <label>Image1/url</label>
+            <!--<input type="file" class="form-control" id="price"[(ngModel)]="images.image1" name="image1">or -->
+            <input type="text" class="form-control" placeholder="enter image1 URL" id="price"[(ngModel)]="images.image1" name="image1">
+
+        </div>
+        <div class="form-group">
+            <label>Image2/url</label>
+            <!--<input type="file" class="form-control" id="price"[(ngModel)]="images.image2" name="image2">or -->
+            <input type="text" class="form-control" placeholder="enter image2 URL" id="price"[(ngModel)]="images.image2" name="image2">
+
+        </div>
+        <div class="form-group">
+            <label>Image3/url</label>
+            <!--<input type="file" class="form-control" id="price"[(ngModel)]="images.image3" name="image3">or-->
+            <input type="text" class="form-control" placeholder="enter image3 URL" id="price"[(ngModel)]="images.image3" name="image3">
+
+        </div>
+        <br>
+        <button class ="btn btn-success" type ="submit">Submit</button>&nbsp;
+        <button class ="btn btn-dark" (click)="admindashboard()">back</button>
+
+    </form>
+    <br><br>
+</div>
+<br><br>
+</body>

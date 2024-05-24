@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    font-family: 'Times New Roman', Times, serif;             
+}
+.contact{
+    position: relative;
+    min-height: 50vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://media.istockphoto.com/id/1416335096/photo/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address.webp?b=1&s=170667a&w=0&k=20&c=O39_wq7HB2oZHV3pyeZDxFAq0Xb_zNvLKrAIEWDVveY=);
+    background-size:100% 100%;
+}
+.contact .content{
+    max-width: 700px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 35px;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+
+    box-shadow: 0 0.3rem rgba(121, 121, 121, 0.70);
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 400;
+    color: #00bcd4;
+    font-size: 20px;
+    
+}
+.container .contactInfo .box a{
+    display: inline-block;
+    padding: 1rem 1rem;
+    letter-spacing: 1px;
+    margin: 1.5rem 1rem;
+    margin-left: 20%;
+    font-size: 1rem;
+    color: #000;
+    border-radius: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    background: #fff;
+}
+.container .contactInfo h4{
+    text-align: center;
+    font-size: medium;
+}

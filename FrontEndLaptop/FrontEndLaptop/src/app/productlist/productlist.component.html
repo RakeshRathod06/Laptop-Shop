@@ -1,0 +1,45 @@
+
+<html>
+    <body style="background-color:rgb(159, 255, 247);">
+
+<div class="container-fluid" >
+    <br>
+    <h3 id="a" style=" color: #1d0303;font-size: 60px;text-align: left;font-family:serif;text-align: center;"> Products List </h3><br>
+    <table class="container-fluid" class="table table-striped">
+    <thead class="container-fluid">
+        <tr>
+            <th>Brand</th>
+            <th>Model</th>
+            <th>Price</th>
+            <th>Details</th>
+            <th>Image</th>
+            <th>Actions 🛠 </th>
+
+        </tr>
+    </thead>
+    <tbody class="container-fluid">
+        <tr *ngFor="let laptop of laptop">           
+            <td>{{laptop.brand}}</td>
+            <td>{{laptop.model}}</td>
+            <td>{{laptop.price}}</td>
+            <td>{{laptop.description}}</td>
+            <td> <img [src]="laptop.image"  alt="Product Image" height="90" width="120" /> </td>
+
+            <td>
+                <button (click) ="updateProduct(laptop.id)" class="btn btn-info">Update</button>
+                <button (click) ="deleteProduct(laptop.id)" class="btn btn-danger" style="margin-left:10px" (click)="delete()">Delete</button><br>
+
+                <!--<button (click) ="addProduct(product.id)" class="btn btn-info" style="margin-left:10px">Add</button>-->
+
+            </td>
+        </tr>
+    </tbody>
+    <br>
+    &nbsp;&nbsp; <a href="/admindashboard"><h4>back</h4></a>
+
+</table>
+<br>
+</div>
+  
+</body>
+</html>

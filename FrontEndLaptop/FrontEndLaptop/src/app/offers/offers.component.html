@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width-device=width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  
+    <title> Offer </title>
+    <style>
+        body{
+            background: linear-gradient(30deg, rgb(30, 41, 111), rgb(84, 241, 241), rgb(92, 92, 229));
+        }     
+        h2{
+            color: #fff;
+            font-size: 55px;
+            text-align: center;
+        }
+        .container{
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow: hidden;
+        }
+        .imgContainer{
+            width: 100%;
+            height: 600px;
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+        }
+        .slide_div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 30px 0 30px;
+        }
+        img{
+            position: relative;
+            width: 240px;
+            height: 370px;
+            filter: saturate(10%);
+            transition: 0.7s;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+        }
+        .button{
+            position: absolute;
+            width: 240px;
+            height: 370px;
+            transition: 0.7s;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+        }
+        .button:hover{
+            background-color: rgba(176, 176, 176, 0.2);
+        }
+
+        #slider1:target ~ .imgContainer #img1,
+        #slider1:target ~ .imgContainer #button1{
+            width: 390px;
+            height: 600px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        #slider2:target ~ .imgContainer #img2,
+        #slider2:target ~ .imgContainer #button2{
+            width: 390px;
+            height: 600px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        #slider3:target ~ .imgContainer #img3,
+        #slider3:target ~ .imgContainer #button3{
+            width: 390px;
+            height: 600px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        #slider4:target ~ .imgContainer #img4,
+        #slider4:target ~ .imgContainer #button4{
+            width: 390px;
+            height: 600px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+        #slider5:target ~ .imgContainer #img5,
+        #slider5:target ~ .imgContainer #button5{
+            width: 390px;
+            height: 600px;
+            background-color: transparent;
+            filter: saturate(100%);
+        }
+
+        #slider1:target ~ .imgContainer{
+            left: 40%;
+        }
+        #slider2:target ~ .imgContainer{
+            left: 20%;
+        }
+        #slider3:target ~ .imgContainer{
+            left: 0%;
+        }
+        #slider4:target ~ .imgContainer{
+            left: -20%;
+        }
+        #slider5:target ~ .imgContainer{
+            left: -40%;
+        }
+        .img1{height: 370px;}
+        .img1 {
+    width: 240px;
+    height: 370px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+  }
+  .enlarged {
+    width: 390px;
+    height: 600px;
+    filter: saturate(100%);
+  }
+  
+    </style>
+</head>
+
+
+<body>
+  
+
+<!--navbar1-->
+<div  >
+  <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm"style="background-color: rgb(255, 188, 225);">
+    <div style="background-color: rgb(0, 0, 0); border-radius:25%; color:rgb(255, 145, 0); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" class="container-fluid">
+      <a class="navbar-brand"style="color: aliceblue;"><i class="fa-solid fa-shop me-2"></i> <strong>Laptop SHOP</strong></a>
+      <img src="https://images.unsplash.com/photo-1491472253230-a044054ca35f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D"  style="border-radius: 50%; width: 80px; height: 70px;">&nbsp;&nbsp;
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown" >
+        
+       
+        <ul class="navbar-nav ms-auto " >
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/header" style="color: aliceblue;"><b> Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/products" routerLink="/products"style="color: aliceblue;"><b> Products</b></a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/cart"style="color: aliceblue;"><b> Cart</b> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/offers"style="color: aliceblue;"><i class="fa fa-shopping-basket" aria-hidden="true"></i> <b> Offers</b></a>
+          </li>
+          &nbsp;&nbsp;
+
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/contact"  style="white-space: nowrap;color: aliceblue;"><b> Contact us</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/about"  style="white-space: nowrap;color: aliceblue;"><b>About us</b></a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid" style="width:auto;">
+    <h2> Our Offers </h2>
+    <div class="container">
+        
+        <span class="slider" id="slider1"></span>
+        <span class="slider" id="slider2"></span>
+        <span class="slider" id="slider3"></span>
+        <span class="slider" id="slider4"></span>
+        <span class="slider" id="slider5"></span>
+
+        <div class="imgContainer">
+           <div class="img1" class="slide_div" id="slide_1" (click)="enlargeImage('img1')">
+            <img src="https://pbs.twimg.com/media/FY1J1OkaQAEnycb.jpg" 
+            alt="" class="img" id="img1" >
+           </div>
+           <div class="img1" class="slide_div" id="slide_2" (click)="enlargeImage('img2')">
+            <img src="https://www.bajajmall.in/content/dam/emistoremarketplace/index/10-10-22/shahaji/laptops-diwali-offers-page/top-selling-brands/LapCLP_Row2_4_4blocker_MOB_LapMI_BrandPLP_B2B.jpg" alt="" class="img" id="img2">
+           </div>
+           <div class="img1" class="slide_div" id="slide_3" (click)="enlargeImage('img3')">
+            <img src="https://img.freepik.com/free-vector/realistic-cyber-monday-flyer-template_52683-48181.jpg?w=360&t=st=1700927546~exp=1700928146~hmac=64e8cedd4edb50163d0621898de740dd8fb39396911e5c7d7af8803a1099b41c" alt="" class="img" id="img3">
+           </div>
+           <div class="img1" class="slide_div" id="slide_4" (click)="enlargeImage('img4')">
+            <img src="https://img.freepik.com/free-psd/black-friday-super-sale-social-media-banner-template_106176-1500.jpg?w=740&t=st=1700927638~exp=1700928238~hmac=425e1a74d55a910ff9cadec16d990d3bd555836e12c82df56fec83918cd24f26" 
+            alt="" class="img" id="img4" >
+           </div>
+           <!--<div class="img1" class="slide_div" id="slide_5" (click)="enlargeImage('img5')">
+            <img src="https://img.freepik.com/premium-vector/laptop-gadget-sale-social-media-instagram-post-banner-template_188201-98.jpg?w=740" alt="" class="img" id="img5">
+           </div>-->
+        </div>
+    </div>
+</div>
+</body>

@@ -1,0 +1,44 @@
+<!-- Main Content for Registration Page final-->
+<header>
+    <style>
+      #registration-intro {
+        background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+        height: 100vh;
+      }
+    </style>
+  
+    <!-- Welcome Message for Registration Page -->
+    <div id="registration-intro" class="bg-image shadow-2-strong">
+      <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-5 col-md-8">
+              <h1 class="text-white">Welcome to our Laptop Shop Admin..</h1>
+              <form (ngSubmit)="adminSignup()" class="bg-white rounded-5 shadow-5-strong p-5">
+                <!-- Email input for registration -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form1Example1" class="form-control" placeholder="Enter your email" required [(ngModel)]="username" name="username" />
+                  <label class="form-label" for="form1Example1">Email address</label>
+                </div>
+  
+                <!-- Password input for registration -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="form1Example2" class="form-control" placeholder="Create a password" required [(ngModel)]="password" name="password" />
+                  <label class="form-label" for="form1Example2">Password</label>
+                </div>
+  
+                <!-- Sign-up button -->
+                <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+  
+                <!-- Already have an account link for existing users -->
+                <div class="text-center mt-4">
+                  Already have an account? <a [routerLink]="['/adminlogin']">Sign in</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  

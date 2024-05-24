@@ -1,0 +1,118 @@
+body{
+    background: linear-gradient(30deg, rgb(30, 41, 111), rgb(84, 241, 241), rgb(92, 92, 229));
+}     
+h2{
+    color: #fff;
+    font-size: 55px;
+    text-align: center;
+}
+.container{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+.imgContainer{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.slide_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+}
+img{
+    position: relative;
+    width: 240px;
+    height: 370px;
+    filter: saturate(10%);
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+.button{
+    position: absolute;
+    width: 240px;
+    height: 370px;
+    transition: 0.7s;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+.button:hover{
+    background-color: rgba(176, 176, 176, 0.2);
+}
+
+#slider1:target ~ .imgContainer #img1,
+#slider1:target ~ .imgContainer #button1{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider2:target ~ .imgContainer #img2,
+#slider2:target ~ .imgContainer #button2{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider3:target ~ .imgContainer #img3,
+#slider3:target ~ .imgContainer #button3{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider4:target ~ .imgContainer #img4,
+#slider4:target ~ .imgContainer #button4{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+#slider5:target ~ .imgContainer #img5,
+#slider5:target ~ .imgContainer #button5{
+    width: 390px;
+    height: 600px;
+    background-color: transparent;
+    filter: saturate(100%);
+}
+
+#slider1:target ~ .imgContainer{
+    left: 40%;
+}
+#slider2:target ~ .imgContainer{
+    left: 20%;
+}
+#slider3:target ~ .imgContainer{
+    left: 0%;
+}
+#slider4:target ~ .imgContainer{
+    left: -20%;
+}
+#slider5:target ~ .imgContainer{
+    left: -40%;
+}
+.img{height: 370px;}
+.img {
+width: 240px;
+height: 370px;
+filter: saturate(10%);
+transition: 0.7s;
+background-color: rgba(0, 0, 0, 0.4);
+border-radius: 20px;
+}
+.enlarged {
+width: 390px;
+height: 600px;
+filter: saturate(100%);
+}

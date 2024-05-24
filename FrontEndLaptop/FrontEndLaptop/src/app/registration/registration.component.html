@@ -1,0 +1,134 @@
+<!-- Main Content for Registration Page final-->
+<header>
+  <style>
+    #registration-intro {
+      background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+      height: 100vh;
+    }
+
+    .register-link:hover {
+  color: red; /* Color of the link when the cursor hovers over it */
+}
+
+  </style>
+</header>
+
+
+
+
+<div id="registration-intro" class="bg-image shadow-2-strong">
+  <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-md-8" class="container">
+          <br><br><br>
+          <h1 class="text-white">User Registration </h1>
+          <form (ngSubmit)="userSignup()" class="bg-white rounded-5 shadow-5-strong p-5">
+            <div class="row mb-4">
+              <div class="col-6">
+                <label class="form-label">Username</label>
+                <input type="text" class="form-control" placeholder="Enter Username" required [(ngModel)]="username" name="username" required/>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" placeholder="Enter your email" required [(ngModel)]="email" name="email" />
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-6">
+                <label class="form-label">Age</label>
+                <input type="text" class="form-control" placeholder="Enter your Age" required [(ngModel)]="age" name="age" />
+              </div>
+              <div class="col-6">
+                <label class="form-label">Address</label>
+                <input type="textbox" class="form-control" placeholder="Enter your Address" required [(ngModel)]="address" name="address" />
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-6">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" placeholder="Create a password" required [(ngModel)]="password" name="password" required />
+              </div>
+              <div class="col-6">
+                <label class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" placeholder="Confirm password" required [(ngModel)]="confirmPassword" name="confirmPassword" #confirmPasswordInput="ngModel" required />
+                <div *ngIf="password !== confirmPassword && confirmPasswordInput.touched" class="text-danger">
+                  Passwords do not match.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col-12 text-center">
+                Already have an account? <a class="register-link"  [routerLink]="['/login']">Sign in</a>
+              </div>
+            </div>
+          </form>
+          <br><br><br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Welcome Message for Registration Page old
+  <div id="registration-intro" class="bg-image shadow-2-strong">
+    <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-md-8">
+            <h1 class="text-white">Welcome to our Laptop Shop... </h1>
+            <p class="text-white">Happy shopping!</p>
+            <form (ngSubmit)="userSignup()" class="bg-white rounded-5 shadow-5-strong p-5">
+              <div class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" placeholder="Enter Username" required [(ngModel)]="username" name="username" />
+                <label class="form-label" for="form1Example1">Username </label>
+              </div>
+
+              <!-- Email input for registration 
+              <div class="form-outline mb-4">
+                <input type="email" id="form1Example1" class="form-control" placeholder="Enter your email" required [(ngModel)]="email" name="email" />
+                <label class="form-label" for="form1Example1">Email address</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" placeholder="Enter your Age" required [(ngModel)]="age" name="age" />
+                <label class="form-label" for="form1Example1">Age</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="text" id="form1Example1" class="form-control" placeholder="Enter your Address" required [(ngModel)]="address" name="address" />
+                <label class="form-label" for="form1Example1">Address</label>
+              </div>
+              <!-- Password input for registration --
+              <div class="form-outline mb-4">
+                <input type="password" id="form1Example2" class="form-control" placeholder="Create a password" required [(ngModel)]="password" name="password" />
+                <label class="form-label" for="form1Example2">Password</label>
+              </div>
+              <div class="form-outline mb-4">
+                <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required [(ngModel)]="confirmPassword" name="confirmPassword" #confirmPasswordInput="ngModel" />
+                <label class="form-label" for="confirmPassword">Confirm Password</label>
+                <div *ngIf="password !== confirmPassword && confirmPasswordInput.touched" class="text-danger">
+                  Passwords do not match.
+                </div>
+              </div>
+
+              <!-- Sign-up button --
+              <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+
+              <!-- Already have an account link for existing users --
+              <div class="text-center mt-4">
+                Already have an account? <a [routerLink]="['/login']">Sign in</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+

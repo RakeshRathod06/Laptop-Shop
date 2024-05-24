@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width-device=width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+        <title> Respoinsive Contact Us Page</title>
+
+        <style>
+            body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.contact{
+    position: relative;
+    min-height: 50vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(https://media.istockphoto.com/id/1416335096/photo/businessman-hand-holding-smart-phone-with-icon-mobile-phone-mail-telephone-and-address.webp?b=1&s=170667a&w=0&k=20&c=O39_wq7HB2oZHV3pyeZDxFAq0Xb_zNvLKrAIEWDVveY=);
+    background-size:100% 100%;
+}
+.contact .content{
+    max-width: 700px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 50px;
+    font-weight: 700;
+    color: #fff;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+        </style>
+    </head>
+
+    
+
+        
+<div>
+    <!--navbar1-->
+  <div style="height:10%;" >
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm"style="background-color: rgb(255, 188, 225);">
+      <div style="background-color: rgb(0, 0, 0); border-radius:20%; color:rgb(255, 145, 0); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" class="container-fluid">
+        <a class="navbar-brand"style="color: aliceblue;"><i class="fa-solid fa-shop me-2"></i> <strong>Laptop SHOP</strong></a>
+        <img src="https://images.unsplash.com/photo-1491472253230-a044054ca35f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D" height="30" width="70"  style="border-radius: 50%; width: 80px; height: 70px;">&nbsp;&nbsp;
+        <div class=" collapse navbar-collapse" id="navbarNavDropdown" >
+          
+          <div class="ms-auto d-none d-lg-block"  >
+            <div class="ms-auto d-none d-lg-block">
+              <div class="input-group">
+              
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav ms-auto " >
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="/header" style="color: aliceblue;"><b> Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="/products" routerLink="/products"style="color: aliceblue;"><b> Products</b></a>
+            </li>
+      
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="/cart"style="color: aliceblue;"><b> Cart</b> </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="/offers"style="color: aliceblue;"><b> Offers</b></a>
+            </li>
+            &nbsp;&nbsp;
+
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="/contact"  style="white-space: nowrap;color: aliceblue;"><i class="fa-solid fa-circle-user me-1" ></i><b> Contact us</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-2 text-uppercase" href="/about"  style="white-space: nowrap;color: aliceblue;"><b>About us</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  </div>
+  
+
+
+
+
+
+  <body>
+    <!-- contact-us.component.html -->
+        <section class="contact">
+            <div class="content">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"> <i class="fa fa-map-marker" aria-hidden="true"></i> </div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Edubridge Learning Pune<br>
+                                3rd Floor, Phase, JP Morgan Capgemini School of Coding, P-301, 1, Chinchwad - Akurdi Link Rd, Chinchwad, Pimpri-Chinchwad, Maharashtra 411019</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i> </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>8698044221</p>
+                            <a href="tel:+18698044221" class="btn btn-primary m-1">Call Us</a>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-envelope" aria-hidden="=true"></i> </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>
+                              You can contact us at <a href="mailto:rishikeshbade&#64;gmail.com">rishikeshbade&#64;gmail.com</a>.
+                            </p>
+                            
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=rishikeshbade@gmail.com" class="btn btn-primary m-1" target="_blank">Mail Us</a>
+                        </div>
+                    </div  >
+                    <h4 style="color:#fff">You can also contact us through our social media handles below..!</h4>
+
+                </div>
+            </div>
+        </section>
+  
+
+    </body>
+</html>

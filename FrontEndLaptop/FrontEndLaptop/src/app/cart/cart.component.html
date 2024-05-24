@@ -1,0 +1,72 @@
+<!-- cart.component.html -->
+<div>
+  <!--navbar1-->
+<div style="height:10%;" >
+  <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm"style="background-color: rgb(255, 188, 225);">
+    <div style="background-color: rgb(0, 0, 0); border-radius:20%; color:rgb(255, 145, 0); font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" class="container">
+      <a class="navbar-brand"style="color: aliceblue;"><i class="fa-solid fa-shop me-2"></i> <strong>Laptop SHOP</strong></a>
+      <img src="https://images.unsplash.com/photo-1491472253230-a044054ca35f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwY29tcHV0ZXJ8ZW58MHx8MHx8fDA%3D" height="30" width="70"  style="border-radius: 50%; width: 80px; height: 70px;">&nbsp;&nbsp;
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown" >
+        
+        <div class="ms-auto d-none d-lg-block"  >
+          <div class="ms-auto d-none d-lg-block">
+            <div class="input-group">
+            
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav ms-auto " >
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/header" style="color: aliceblue;"><b> Home</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/products" routerLink="/products"style="color: aliceblue;"><b> Products</b></a>
+          </li>
+    
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/cart"style="color: aliceblue;"><i class="fa-solid fa-cart-shopping me-1"></i><b> Cart</b> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/offers"style="color: aliceblue;"><b> Offers</b></a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/contact"  style="white-space: nowrap;color: aliceblue;"><b>Contact us</b></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase" href="/about"  style="white-space: nowrap;color: aliceblue;"><b>About us</b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+</div>
+
+
+
+
+<body style="background-color: aquamarine; ">
+<div>
+  
+  <h3 style=" color: #ffffff;font-size: 50px;text-align: left;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;text-align: center;"> Your Cart </h3>
+    <br>
+    <ul>
+      <li *ngFor="let item of cartItems">
+        <div>
+        <img [src]="item.image" alt="Product Image" height="100" width="150">
+        &nbsp;&nbsp;&nbsp;
+       <a hrefa="productdetails/:id  "><b>{{ item.brand }}-{{ item.model }} &nbsp; Rs.{{ item.price }}</b></a> &nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <!--<button type="button"  class="btn btn-success" href="#"  (click)="payNow()" (click)="placeOrder()">Buy now</button> &nbsp;&nbsp;
+       <button  class="btn btn-warning"  (click)="cashOnDelivery()">Cash on delivery </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       -->
+       
+       <button  class="btn btn-warning" (click)="buy(item)">View to buy </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class=" btn btn-danger" (click)="  removeFromCart(item)"> Remove</button>
+           </div>
+      </li>
+    </ul>
+    <br>
+</div>
+</body>
